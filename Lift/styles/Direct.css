@@ -9,12 +9,25 @@ body {
 .meter{
     border: 12px #b3b4b5 solid;
     font-family: 'Press Start 2P', cursive;
-    background-color:rgba(0, 0, 0, 0.797) ;
+    background-color:#333;
     display: flex;
     justify-content: center;
+    align-items: center;
     width:30%;
     gap: 40px;
     font-size: 40px;
   
     color: #B00101;
+    animation: blink-animation 10s linear infinite;
+}
+@keyframes blink-animation {
+  0% { visibility: visible; }
+  50% { visibility: hidden; }
+  100% { visibility: visible; }
+}
+
+
+#down_arrow,#up_arrow{
+  width: 70px;
+  height: 50px;
 }
