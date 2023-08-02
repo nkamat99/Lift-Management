@@ -16,7 +16,7 @@ body {
     width:30%;
     gap: 40px;
     font-size: 40px;
-  
+  line-height: 5px;
     color: #B00101;
     animation: blink-animation 10s linear infinite;
 }
