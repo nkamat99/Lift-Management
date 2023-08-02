@@ -13,7 +13,7 @@ body {
     background-size: 100%;
     background-position: center; 
     /* background-color: rgb(36, 36, 36); */
-    background-image: url('/Reference/brick_bac.jpeg');
+    background-image: url("brick.jpeg");
    
 
   }
