@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/login.css"> 
+    <link rel="stlesheet" href="./styles/console.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handjet&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="metal">
-        <div name="arrow"></div>
+        <img id = "upArrow" src = "styles/up.PNG" style="top:-10px">
         <form class="form">
             <input type="text" class = "input" placeholder = "Number of people entering the lift" required>
-            
+            <div class = "dropdown">
+                <button class="dropbtn">Select Floor</button>
+                <div class = dropdown-content>
+                    <a href="">G</a>
+                    <a href = "">1</a>
+                    <a href = "">2</a>
+                    <a href = "">3</a>
+                    <a href = "">4</a>
+                    <a href = "">5</a>
+                    <a href = "">6</a>
+                    <a href = "">7</a>
+                </div>
+            </div>
         </form>
-        <div class = "down"> </div>
+        <img id = "downArrow" src = "styles/downArrow.PNG">
     </div>
 </body>
