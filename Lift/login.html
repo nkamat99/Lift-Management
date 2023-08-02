@@ -13,7 +13,7 @@
         
         <div class="container">
             <input id="signup_toggle" type="checkbox">
-            <form class="form">
+            <form class="form" id="loginform">
                 <div class="form_front">
                     <div class="form_details">
                         <p><span style="padding-right: 15px">CAPACITY</span> 8 persons</p>
@@ -21,9 +21,9 @@
                         <!-- change the details -->
                         <p><span style="padding-right: 42px">LOAD</span> 680 kgs</p>
                     </div>
-                    <input type="text" class="input" placeholder="Room No." required>
-                    <input type="password" class="input" placeholder="Password" required>
-                    <button class="btn">Login</button>
+                    <input type="text" class="input" id="roomno" name="roomno" placeholder="Room No." required>
+                    <input type="password" class="input" id="password" name="password" placeholder="Password" required>
+                    <button class="btn" type="submit">Login</button>
                     
                 </div>
                

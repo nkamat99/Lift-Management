@@ -4,31 +4,32 @@ document.addEventListener("DOMContentLoaded", function() {
     form.addEventListener("submit", async function(event) {
       event.preventDefault(); // Prevents the form from actually submitting
   
-      const username = document.getElementById("roomno").value;
+      const roomno = document.getElementById("roomno").value;
       const password = document.getElementById("password").value;
   
-      console.log("Username:", username);
+      console.log("Roomno:", roomno);
+      alert("Login sucessful");
       console.log("Password:", password);
   
-      const formData = {
-        username: username,
-        password: password
-      };
+    //   const formData = {
+    //     roomno: roomno,
+    //     password: password
+    //   };
   
-      try {
-        const response = await fetch("your_backend_endpoint_here", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(formData)
-        });
+    //   try {
+    //     const response = await fetch("your_backend_endpoint_here", {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json"
+    //       },
+    //       body: JSON.stringify(formData)
+    //     });
   
-        const responseData = await response.json();
-        console.log("Response from backend:", responseData);
-      } catch (error) {
-        console.error("Error:", error);
-      }
+    //     const responseData = await response.json();
+    //     console.log("Response from backend:", responseData);
+    //   } catch (error) {
+    //     console.error("Error:", error);
+    //   }
     });
   });
   
