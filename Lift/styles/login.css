@@ -18,6 +18,10 @@ body {
 
   }
   
+  .arrow {
+    background-image: url("./up.PNG");
+    background-size: 20%;
+  }
   .metal {
     background-image: url("./Metal.jpg");
    
