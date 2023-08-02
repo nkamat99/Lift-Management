@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="./styles/login.css"> 
-    <link rel="stlesheet" href="./styles/console.css">
+    <link rel="stylesheet" href="./styles/console.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handjet&display=swap" rel="stylesheet">
@@ -9,9 +9,10 @@
 
 <body>
     <div class="metal">
-        <img id = "upArrow" src = "styles/up.PNG" style="top:-10px">
+        <a href=""><img id = "upArrow" src = "styles/up.PNG"></a>
+        <a href=""><img id = "downArrow" src = "styles/downArrow.PNG"></a>
         <form class="form">
-            <input type="text" class = "input" placeholder = "Number of people entering the lift" required>
+            <input type="text" class = "input" id = "input" placeholder = "Number of people entering the lift" required>
             <div class = "dropdown">
                 <button class="dropbtn">Select Floor</button>
                 <div class = dropdown-content>
@@ -26,6 +27,5 @@
                 </div>
             </div>
         </form>
-        <img id = "downArrow" src = "styles/downArrow.PNG">
     </div>
 </body>
