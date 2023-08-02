@@ -1,81 +1,95 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #87bdf1;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('https://q-xx.bstatic.com/xdata/images/hotel/max1200/17173782.jpg?k=741c80ecda52c527bdcba7756c51ac618f3e7c40416b3cf58aa68e0753edbda5&o=');
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center center; 
-    background-blend-mode: multiply;
-  }
-  
-  .login-container {
-    background-color: #21395f;
-    padding: 60px 90px;
-    border-radius: 5px;
-    box-shadow: 5px 5px rgb(28, 4, 66);
-  }
-  
-  .login-container h2 {
-    text-align: center;
-    margin-bottom: 5rem;
-    color: #ffffff;
-  }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  ::placeholder{
-    color: white;
-    opacity: 1;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #87bdf1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://q-xx.bstatic.com/xdata/images/hotel/max1200/17173782.jpg?k=741c80ecda52c527bdcba7756c51ac618f3e7c40416b3cf58aa68e0753edbda5&o=');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-blend-mode: multiply;
+}
 
-  :-ms-input-placeholder{
-    color: white;
-  }
+.login-container {
+  background-color: #21395f;
+  padding: 60px 90px;
+  border-radius: 5px;
+  box-shadow: 5px 5px rgb(28, 4, 66);
+}
 
-  ::-ms-input-placeholder{
-    color: white;
-  }
-  .form-group input {
-    padding: 10px;
-    border: 1px solid black;
-    /* box-shadow: 2px 2px 2px 2px #0f0c5ea0; */
-    border-radius: 3px;
-    width: 100%;
-    background-color: #2c4975a3;
-    background-image: linear-gradient(180deg, black -27%, #2c4975a3 22%, transparent);
-    background-blend-mode: difference;
-  }
-  
-  .form-group button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  .form-group button:hover {
-    background-color: #45a049;
-  }
-  
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-shadow: 0.2px 1.2px;
+}
+
+.login-container h3 {
+  text-align: center;
+  /* margin-bottom: 3rem; */
+  color: #ffffff;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container h3 {
+
+}
+
+/* .form-group label {
+  display: block;
+  margin-bottom: 5px;
+} */
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: white;
+}
+
+::-ms-input-placeholder {
+  color: white;
+}
+
+.form-group input, 
+.form-group select{
+  padding: 10px;
+  border: 1px solid black;
+  /* box-shadow: 2px 2px 2px 2px #0f0c5ea0; */
+  border-radius: 3px;
+  width: 100%;
+  background-color: #2c4975a3;
+  background-image: linear-gradient(180deg, black -27%, #2c4975a3 22%, transparent);
+  background-blend-mode: difference;
+  color: white;
+}
+
+.form-group button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.form-group button:hover {
+  background-color: #45a049;
+}

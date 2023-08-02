@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin_login.css">
+    <title>Update Details</title>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>UPDATE USER DETAILS</h2>
+        <form class="login-form" action="#" method="post">
+            <h3>ROOM NO. 201</h2>
+            <!-- <div class="form-group">
+                <input type="text" id="roomno" name="roomno" value="ROOM 203" readonly>
+            </div> -->
+            
+            <div class="form-group">
+                <input type="text" id="user" name="user" placeholder="Add New User" required>
+            </div>
+            
+            <!-- <label for="cars">Choose access level type:</label> -->
+
+            <div class="form-group">
+                <select name="accesslevel" id="accesslevel">
+                    <option value="gold">Gold</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="platinum">Platinum</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="additional_floors" name="additional_floors" placeholder="Add Additional Floors" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
