@@ -6,6 +6,7 @@
     width: 50px;
     height: 50px;
     right: 120px;
+    z-index: -1;
 }
 
 #input {
@@ -308,9 +309,6 @@
     
   }
   
-  .option:nth-child(6) input[type="radio"]:checked ~ .label::after {
-    display: none;
-  }
   .option:nth-child(7) input[type="radio"]:checked ~ .opt-val {
     top : -261px;
   }
