@@ -4,21 +4,22 @@ document.addEventListener("DOMContentLoaded", function() {
     loginForm.addEventListener("submit", async function(event) {
       event.preventDefault();
   
-      const username = document.getElementById("username").value;
+      const staffName = document.getElementById("username").value;
       const password = document.getElementById("password").value;
   
       try {
-        const response = await fetch("/api/login", { // Replace with your backend login API URL
+        const response = await fetch("http://localhost:8080/staff/AdminLogin", { // Replace with your backend login API URL
           method: "POST",
+          mode: "cors",
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify({ username, password })
+          body: JSON.stringify({ staffName, password })
         });
   
         const responseData = await response.json();
         
-        if (responseData.success) {
+        if (responseData.message == 'Login successful') {
           // Successful login, navigate to bookings.html
           window.location.href = "bookings.html";
         } else {
