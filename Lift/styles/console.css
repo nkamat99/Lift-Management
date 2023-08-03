@@ -2,12 +2,13 @@
  #arrow {
     position: relative;
     border: 5px solid white;
-    top: 40px;
-    width: 50px;
-    height: 50px;
-    right: 10px;
+    /* top: 0px; */
+    width: 40px;
+    height: 40px;
+    /* right: 10px; */
     z-index: -1;
 } 
+
 
 /* #input {
     position: absolute;
