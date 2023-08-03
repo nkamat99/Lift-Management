@@ -1,23 +1,27 @@
 
-#arrow {
+ #arrow {
     position: relative;
     border: 5px solid white;
-    top: 120px;
+    top: 40px;
     width: 50px;
     height: 50px;
-    right: 135px;
+    right: 10px;
     z-index: -1;
-}
+} 
 
-#input {
+/* #input {
     position: absolute;
     top: -80px;
     right:35px;
-}
+} */
 
-#floor {
+/* #floor {
     position:relative;
     right:-25px;
+} */
+
+#details {
+    top: -50px;
 }
 
 .section {
