@@ -3,15 +3,37 @@
 <head>
   <link rel="stylesheet" href="./styles/floor_console.css">
   <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handjet&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
  <div>
-    <div id="slanted-container">
-        <img src="./assets/fan.jpeg" id="fan">
-    </div>
-    <input type="button" value="sound" onclick="playMusic()" />
+    <!-- <div id="slanted-container">
+        <img src="./assets/fan.png" id="fan">
+    </div> -->
+    
    
  </div>
- 
+ <div class="container">
+    <table>
+        <tr>
+            <td></td>
+
+        </tr>
+    </table>
+    <div class="box">
+        <button id="fan" onclick="playMusic()" >
+        <img src="./assets/fan.png" style="height: 30px; width: 30px;">
+        </button>
+    </div>
+</div>
+<div class="steel">
+    <div class="meter">
+      <img id="down_arrow" src="./assets/down_arrow.png"/>
+        <p id="current_floor">0</p>
+       <img id="up_arrow" src="./assets/up_arrow.png"/>
+    </div>
 </body>
 </html>
