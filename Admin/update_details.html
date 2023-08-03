@@ -11,18 +11,15 @@
 <body>
     <div class="login-container">
         <h2>UPDATE USER DETAILS</h2>
-        <form class="login-form" action="#" method="post">
-            <h3>ROOM NO. 201</h2>
-            <!-- <div class="form-group">
-                <input type="text" id="roomno" name="roomno" value="ROOM 203" readonly>
-            </div> -->
-            
+        <form class="login-form" id="updateForm" action="/api/update" method="post"> <!-- Replace with your backend update API URL -->
             <div class="form-group">
-                <input type="text" id="user" name="user" placeholder="Add New User" required>
+                <input type="text" id="roomno" name="roomno" placeholder="Room Number" readonly>
             </div>
             
-            <!-- <label for="cars">Choose access level type:</label> -->
-
+            <div class="form-group">
+                <input type="text" id="user" name="user" placeholder="User" required>
+            </div>
+            
             <div class="form-group">
                 <select name="accesslevel" id="accesslevel">
                     <option value="gold">Gold</option>
@@ -32,14 +29,18 @@
             </div>
 
             <div class="form-group">
-                <input type="text" id="additional_floors" name="additional_floors" placeholder="Add Additional Floors" required>
+                <input type="text" id="additional_floors" name="additional_floors" placeholder="Additional Floors" required>
             </div>
 
             <div class="form-group">
-                <button type="submit">Login</button>
+                <input type="text" id="updated_by" name="updated_by" placeholder="Updated By" readonly>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Update</button>
             </div>
         </form>
     </div>
+    <script src="update_details.js"></script>
 </body>
-
 </html>
