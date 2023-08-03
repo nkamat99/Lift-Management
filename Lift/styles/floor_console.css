@@ -5,12 +5,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-image: url("/Lift/assets/Floor_console.jpg");
+    background-image: url("/Lift/assets/Floor_console.jpg"); 
    
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 60%; */
-    background-color: black;
+    background-position: 50%; 
+    /* background-color: black; */
   }
   
   .slanted-container {
@@ -51,8 +51,8 @@ body {
   }
   
   .container .box {
-    width: 11.875em;
-    height: 15.875em;
+    width: 18.875em;
+    height: 25.875em;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.074);
     border: 1px solid rgba(255, 255, 255, 0.222);
@@ -65,14 +65,11 @@ body {
   .container .box {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+   
   }
   
-  .container .box .title {
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: .1em
-  }
+  
   
   .container .box div strong {
     display: block;
@@ -140,16 +137,30 @@ body {
   }
   
   button{
-    background-color: black;
+    background-color: rgba(255, 255, 255, 0.074);
+    /* border: 1px solid rgba(255, 255, 255, 0.222); */
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
    width: 70px; 
-  
+  color: white;
+  font-weight: 300;
+  height: 70px;
+  font-size: 20px;
   padding-top:6%;
   padding-bottom:6%;
   
-  margin-top:-0.5em;
+ margin-top: 10px;
     
     border-radius: 50%;
     border: 2px solid white;
     
 
   }
+  button:hover{
+    box-shadow: 0 0 30px #B01001;
+  }
+.rows{
+    border-spacing: 100px 0px;
+}
+
+ 

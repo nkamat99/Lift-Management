@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/Lift/assets/Floor_console.jpg"); 
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%; 
+}
+div{
+    margin: 0;
+    padding: 0;
+   
+}
+#right{
+
+    animation-duration: 5s;
+    animation-name: rightslide ; 
+    z-index: 10;
+  }
+  @keyframes rightslide {
+    from {
+      margin-left: 0%;
+      width: 50%;
+    }
+  
+    to {
+      margin-left: 100%;
+      width: 0%;
+      display: none;
+    }
+  }
+  #left{
+    animation-duration: 5s;
+    animation-name: leftslide;
+   z-index: 10;
+    
+  }
+  @keyframes leftslide {
+    to {
+      margin-left:-50%;
+      width: 50%;
+      display: none;
+    }
+  
+    from{
+      margin-left: 50%;
+      width: 0%;
+    }
+  }
+  #back{
+   z-index: -1;
+  }
+  
+    </style>
+</head>
+
+<body>
+    <audio controls autoplay>
+        <source src="/Lift/assets/fan.mp3" type="audio/mp3" />
+    </audio>
+      <div id="left">
+        <img src="/Lift/assets/meter_bac.jpg">
+    </div>
+    <div id="right">
+        <img src="/Lift/assets/meter_bac.jpg">
+    </div>
+
+    
+    <script src="./js/doors.js"/>
+       
+   
+</body>
+

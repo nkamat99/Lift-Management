@@ -23,6 +23,3 @@ music.addEventListener('ended', function () {
   });
 
   
-  
-  
-  
