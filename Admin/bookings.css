@@ -55,4 +55,12 @@ body {
     background-color: #f44336;
     color: #fff;
   }
+
+  .button {
+    background-color: #21395f;
+    height: 50px;
+    width: 70px;
+    color: white;
+
+  }
   
