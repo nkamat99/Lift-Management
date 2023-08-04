@@ -32,12 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
       }, 2000); 
 
       // This part should display a door open animation as it moves to the inside lift console
-      window.location.href = "floor_console.html"
+    //   window.location.href = "floor_console.html"
 
 
     });
 });
-export default liftFloor
+// export default liftFloor
 
 
 
