@@ -13,34 +13,39 @@
         <h2>UPDATE USER DETAILS</h2>
         <form class="login-form" id="updateForm" action="/api/update" method="post"> <!-- Replace with your backend update API URL -->
             <div class="form-group">
-                <input type="text" id="roomno" name="roomno" placeholder="Room Number" readonly>
+                <h3 id="roomno" class = "room no">ROOM NO.</h3>
+            </div>
+            
+            <div class="form">
+                <input type="text" id="user" name="user" class = "input" placeholder="User" required>
             </div>
             
             <div class="form-group">
-                <input type="text" id="user" name="user" placeholder="User" required>
-            </div>
-            
-            <div class="form-group">
-                <select name="accesslevel" id="accesslevel">
-                    <option value="gold">Gold</option>
-                    <option value="bronze">Bronze</option>
-                    <option value="platinum">Platinum</option>
+                <select name="accesslevel" id="accesslevel" class = "input">
+                    <option value = "" disabled selected hidden>Select Access Level</option>
+                    <option value = "0">No special access</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                 </select>
             </div>
 
-            <div class="form-group">
-                <input type="text" id="additional_floors" name="additional_floors" placeholder="Additional Floors" required>
+            <div class="form-">
+                <input type="text" id="additional_floors" name="additional_floors" placeholder="Additional Floors" class = "input" required>
+            </div>
+
+            <div class="form">
+                <input type="text" id="updated_by" name="updated_by" placeholder="Updated By" class="input" readonly>
             </div>
 
             <div class="form-group">
-                <input type="text" id="updated_by" name="updated_by" placeholder="Updated By" readonly>
-            </div>
-
-            <div class="form-group">
-                <button type="submit">Update</button>
+                <button type="submit" style="right:10px;">Update</button>
             </div>
         </form>
     </div>
+    <a href="bookings.html">
+        <button class = "backbtn">Back</button>
+    </a>
     <script src="update_details.js"></script>
 </body>
 </html>
