@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const responseData = await response.json();
         console.log("Response from backend:", responseData);
         if(responseData.status !== 200) {
-          alert(responseData.message)
+          // alert(responseData.message)
+          window.location.href = "console.html";
         }
       } catch (error) {
         console.log("Error:", error);

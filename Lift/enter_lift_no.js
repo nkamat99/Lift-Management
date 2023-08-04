@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
           }
       }, 2000);
       
-      
+      module.exports = liftFloor;
       
     });
     // insideLift(liftFloor);
