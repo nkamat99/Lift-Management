@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("formid");
 
@@ -21,23 +22,34 @@ document.addEventListener("DOMContentLoaded", function() {
       // Define the direction of movement (up or down)
       const direction = Math.sign(floorDifference); // -1 for down, 1 for up
 
+      if(direction == -1 ){
+        document.getElementById("up_arrow").style.visibility='hidden';
+      }
+      else{
+        document.getElementById("down_arrow").style.visibility='hidden';
+      }
+
       const interval = setInterval(function() {
           if (liftFloor !== currentFloor) {
               liftFloor += direction;
               p.textContent = liftFloor.toString();
               console.log("Current Lift Floor:", liftFloor);
           } else {
+            console.log("abc");
+        window.location.href= "Doors.html";
               clearInterval(interval);
           }
       }, 2000); 
 
+    //   if(liftFloor == currentFloor)
+    //   {
+    //     console.log("abc");
+    //     window.location.replace = "Doors.html";
+    //   }
       // This part should display a door open animation as it moves to the inside lift console
-    //   window.location.href = "floor_console.html"
-
-
+      
     });
 });
-// export default liftFloor
 
 
 
