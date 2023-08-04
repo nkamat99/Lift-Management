@@ -13,11 +13,7 @@ body {
     /* background-color: black; */
   }
   
-  .slanted-container {
-    position: relative;
-    display: inline-block;
-  }
-  
+ 
   
   .container {
     position: relative;
@@ -28,26 +24,19 @@ body {
   .container::before, .container::after {
     content: "";
     background-color: #fab5704c;
-    position: absolute;
+    /* position: absolute; */
   }
   
-  .container::before {
-    border-radius: 50%;
-    width: 6rem;
-    height: 6rem;
-    top: 30%;
-    right: 7%;
-  }
-  
+
  
   
   .container::after {
     content: "";
-    position: absolute;
+    /* position: absolute; */
     height: 3rem;
-    top: 8%;
-    right: 5%;
-    border: 1px solid;
+    /* top: 8%;
+    right: 5%; */
+   
   }
   
   .container .box {
@@ -56,7 +45,7 @@ body {
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.074);
     border: 1px solid rgba(255, 255, 255, 0.222);
-    -webkit-backdrop-filter: blur(20px);
+    /* -webkit-backdrop-filter: blur(20px); */
     backdrop-filter: blur(20px);
     border-radius: .7rem;
     transition: all ease .3s;
@@ -71,27 +60,27 @@ body {
   
   
   
-  .container .box div strong {
+  /* .container .box div strong {
     display: block;
     margin-bottom: .5rem;
   }
-  
-  .container .box div p {
+   */
+  /* .container .box div p {
     margin: 0;
     font-size: .9em;
     font-weight: 300;
     letter-spacing: .1em;
-  }
+  } */
   
-  .container .box div span {
+  /* .container .box div span {
     font-size: .7rem;
     font-weight: 300;
-  }
+  } */
   
-  .container .box div span:nth-child(3) {
+  /* .container .box div span:nth-child(3) {
     font-weight: 500;
     margin-right: .2rem;
-  }
+  } */
   
   .container .box:hover {
     box-shadow: 0px 0px 20px 1px #ffbb763f;

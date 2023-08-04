@@ -45,12 +45,12 @@ document.addEventListener("DOMContentLoaded", function() {
           }
       }, 2000);
       
-    // module.exports = liftFloor;
-    
+      const lift= liftFloor;
       
     });
     // insideLift(liftFloor);
     // export default liftFloor;
+    module.exports=async(liftFloor);
 });
 
 
