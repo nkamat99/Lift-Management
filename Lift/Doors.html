@@ -7,7 +7,7 @@
     margin: 0;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+ 
     background-image: url("/Lift/assets/Floor_console.jpg"); 
    
     background-repeat: no-repeat;
@@ -19,15 +19,13 @@ div{
     padding: 0;
    
 }
-img{
-    height: 100vh;
-}
+
 #right{
 
     animation-duration: 5s;
     animation-name: rightslide ; 
     z-index: 10;
-    height: 100vh;
+  
   }
   @keyframes rightslide {
     from {
@@ -45,7 +43,6 @@ img{
     animation-duration: 5s;
     animation-name: leftslide;
    z-index: 10;
-   height: 100vh;
     
   }
   @keyframes leftslide {
@@ -56,7 +53,7 @@ img{
     }
   
     from{
-      margin-right: 50%;
+      margin-left: 50%;
       width: 0%;
     }
   }
@@ -65,11 +62,12 @@ img{
   }
   
     </style>
-     
 </head>
 
 <body>
- 
+    <audio controls autoplay>
+        <source src="/Lift/assets/fan.mp3" type="audio/mp3" />
+    </audio>
       <div id="left">
         <img src="./assets/meter_bac.jpg">
     </div>
@@ -78,7 +76,7 @@ img{
     </div>
 
     
-    <script src="./js/doors.js" ></script>
+    <script src="./js/doors.js"> </script>
        
    
 </body>
