@@ -8,16 +8,20 @@
     justify-content: center;
     align-items: center;
  
-    background-image: url("/Lift/assets/Floor_console.jpg"); 
+    background-image: url("../Lift/assets/Floor_console.jpg"); 
    
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50%; 
+    background-position: 50%;
+    height: 100vh; 
 }
 div{
     margin: 0;
     padding: 0;
    
+}
+img {
+  height: 100vh; 
 }
 
 #right{
@@ -25,6 +29,7 @@ div{
     animation-duration: 5s;
     animation-name: rightslide ; 
     z-index: 10;
+    height: 100vh; 
   
   }
   @keyframes rightslide {
@@ -43,6 +48,7 @@ div{
     animation-duration: 5s;
     animation-name: leftslide;
    z-index: 10;
+   height: 100vh; 
     
   }
   @keyframes leftslide {
@@ -53,7 +59,7 @@ div{
     }
   
     from{
-      margin-left: 50%;
+      margin-right: 50%;
       width: 0%;
     }
   }
@@ -65,9 +71,7 @@ div{
 </head>
 
 <body>
-    <audio controls autoplay>
-        <source src="/Lift/assets/fan.mp3" type="audio/mp3" />
-    </audio>
+   
       <div id="left">
         <img src="./assets/meter_bac.jpg">
     </div>
