@@ -5,7 +5,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("../assets/Floor_console.jpg"); 
+    background-image: url("/Lift/assets/Floor_console.jpg"); 
    
     background-repeat: no-repeat;
     background-size: cover;
@@ -99,7 +99,7 @@ body {
   }  
 
   .steel{
-    background-image: url("../assets/meter_bac.jpg");
+    background-image: url("/Lift/assets/meter_bac.jpg");
     width: 300px;
     display: flex;
     align-items: center;
