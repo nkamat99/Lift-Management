@@ -5,7 +5,13 @@ document.addEventListener("DOMContentLoaded", function() {
       event.preventDefault(); // Prevents the form from actually submitting
   
       const roomId = document.getElementById("roomno").value;
+      sessionStorage.setItem('roomno',roomId);
+
       const password = document.getElementById("password").value;
+
+      // Export the roomId value
+      
+
   
       console.log("Roomno:", roomId);
       // alert("Login sucessful");
@@ -42,3 +48,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
   
+
+  // export { roomId };

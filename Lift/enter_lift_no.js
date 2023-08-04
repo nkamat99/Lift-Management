@@ -1,6 +1,3 @@
-// let liftFloor="2";
-// module.exports = liftFloor;
-
 // Outside the lift
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("formid");
@@ -14,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
       const noOfPeople = parseInt(document.getElementById("input").value);
       const currentFloor = parseInt(document.getElementById("floor").value);  // where the user is currently
-  
+      sessionStorage.setItem('floor',currentFloor);
+
       console.log("Number of People:", noOfPeople);
       console.log("Current Floor:", currentFloor);
 
@@ -45,12 +43,12 @@ document.addEventListener("DOMContentLoaded", function() {
           }
       }, 2000);
       
-    // module.exports = liftFloor;
-    
+      const lift= liftFloor;
       
     });
     // insideLift(liftFloor);
     // export default liftFloor;
+    module.exports=async(liftFloor);
 });
 
 

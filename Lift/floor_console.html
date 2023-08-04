@@ -2,29 +2,39 @@
 <html>
 <head>
   <link rel="stylesheet" href="./styles/floor_console.css">
-  <script type="module" src="floor_console.js"></script>
+  <script src="floor_console.js"></script>
+  <!-- <script type="module" src="lift_access_level.js"></script> -->
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Handjet&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handjet&family=Oswald:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
- <div>
-    <!-- <div id="slanted-container">
-        <img src="./assets/fan.png" id="fan">
-    </div> -->
-    
- </div>
+ 
  <div class="container" id="inside_lift_console">
     
     <div class="box">
+       
         <table>
+           
             <tr>
                 <td class="rows">
-                    <button onclick="" >6</button>
+                    <button class="disable" onclick="" >6</button>
                 </td>
                 <td>
                     <button  onclick="" >7</button>
+                </td>
+                
+            </tr>
+            <tr>
+                <td class="rows">
+                    <p>GYM</p>
+                </td>
+                <td>
+                    <p>ROOFTOP</p>
                 </td>
                 
             </tr>
@@ -51,7 +61,7 @@
                     <button onclick="" >0</button>
                 </td>
                 <td>
-                    <button " onclick="" >1</button>
+                    <button id="1" onclick="" >1</button>
                 </td>
                 
             </tr>
@@ -60,7 +70,7 @@
                     <img src="./assets/fan.png" style="height: 30px; width: 30px;">
                     </button></td>
                 <td>
-                    <button  onclick="" >
+                    <button  onclick="playAlert()" >
                         <img src="./assets/bell.png" style="height: 30px; width: 30px;">
                         </button>
                 </td>
@@ -80,4 +90,5 @@
        <img id="up_arrow" src="./assets/up_arrow.png"/>
     </div>
 </body>
+<script src="script.js"></script>
 </html>
