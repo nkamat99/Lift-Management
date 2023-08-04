@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
       
     });
     // insideLift(liftFloor);
-    export default liftFloor;
+    // export default liftFloor;
 });
 
 
