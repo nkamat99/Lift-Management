@@ -45,9 +45,6 @@ body {
   justify-content: center;
 }
 
-.login-container h3 {
-
-}
 
 /* .form-group label {
   display: block;
@@ -69,27 +66,95 @@ body {
 
 .form-group input, 
 .form-group select{
-  padding: 10px;
+  margin-right:23px;
+  margin-top:20px;
   border: 1px solid black;
   /* box-shadow: 2px 2px 2px 2px #0f0c5ea0; */
   border-radius: 3px;
-  width: 100%;
-  background-color: #2c4975a3;
-  background-image: linear-gradient(180deg, black -27%, #2c4975a3 22%, transparent);
+  width: 245px;
+  background-color: #87bdf1;
+  /* background-image: linear-gradient(180deg, black -27%, #2c4975a3 22%, transparent); */
   background-blend-mode: difference;
-  color: white;
+  color: #043747;
 }
 
 .form-group button {
   padding: 10px;
   background-color: #4CAF50;
   color: #fff;
-  border: none;
-  border-radius: 3px;
+  border: #21395f;
+  border-radius: 5px;
   cursor: pointer;
   margin-top: 20px;
+  box-shadow: 6px 6px 10px black,
+  1px 1px 10px rgba(255, 255, 255, 0.6);
 }
 
 .form-group button:hover {
-  background-color: #45a049;
+  transform: scale(1.05);
+  box-shadow: 6px 6px 10px rgb(5, 5, 5),
+  1px 1px 10px rgba(255, 255, 255, 0.6),
+  inset 2px 2px 10px rgb(60, 225, 82),
+  inset -1px -1px 5px rgba(255, 255, 255, 0.6);
 }
+
+.backbtn {
+  background-color: #4CAF50;
+  color: white;
+  height: 50px;
+  width: 90px;
+  border:#21395f;
+  border-radius: 5px;
+  position:absolute;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+  box-shadow: 6px 6px 10px black,
+  1px 1px 10px rgba(255,255,255,0.6);
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.backbtn:hover {
+  transform: scale(1.05);
+  box-shadow: 6px 6px 10px rgb(5, 5, 5),
+  1px 1px 10px rgba(255, 255, 255, 0.6),
+  inset 2px 2px 10px rgb(60, 225, 82),
+  inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+
+
+}
+
+.input {
+  width:245px;
+  min-height: 45px;
+  color:#21395f;
+  outline:none;
+  transition:0.35s;
+  margin-top:15px;
+  background-color:#87bdf1;
+  border-radius: 6px;
+  border: 2px solid #043747;
+  box-shadow: 6px 6px 10px black,
+  1px 1px 5px rgba(255, 255, 255, 0.6);
+}
+
+.input::placeholder {
+  color: #043747;
+}
+
+.input:focus.input::placeholder {
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.input:focus {
+  transform:scale(1.05);
+  box-shadow: 6px 6px 5px #21395f,
+  1px 1px 10px rgba(255, 255, 255, 0.6),
+  inset 2px 2px 5px #21395f,
+  inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+}
+
