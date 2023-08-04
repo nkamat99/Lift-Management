@@ -1,8 +1,10 @@
-let liftFloor="0";
+// let liftFloor="2";
+// module.exports = liftFloor;
+
 // Outside the lift
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("formid");
-
+    // const p=document.getElementById("p")
     p.textContent = "0";
     let liftFloor = parseInt(p.textContent);  // where the lift is currently
     // console.log(liftFloor)
@@ -43,11 +45,15 @@ document.addEventListener("DOMContentLoaded", function() {
           }
       }, 2000);
       
-      module.exports = liftFloor;
+    // module.exports = liftFloor;
+    
       
     });
     // insideLift(liftFloor);
+    export default liftFloor;
 });
+
+
 
 
 
