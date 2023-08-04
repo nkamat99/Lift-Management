@@ -13,7 +13,13 @@ body {
     /* background-color: black; */
   }
   
- 
+ #speakers{
+
+margin-top: 15px;
+  height: 50px;
+  width: 50px;
+border-radius: 50%;
+ }
   
   .container {
     position: relative;
@@ -41,7 +47,7 @@ body {
   
   .container .box {
     width: 18.875em;
-    height: 25.875em;
+    height: 30.875em;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.074);
     border: 1px solid rgba(255, 255, 255, 0.222);
@@ -49,46 +55,61 @@ body {
     backdrop-filter: blur(20px);
     border-radius: .7rem;
     transition: all ease .3s;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 1s, transform 1s;
+    animation: popupAnimation 1s ease-out forwards;
+  }
+  @keyframes popupAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  table{
+    width: 18.875em;
+    height: 30.875em;
+    transition: width 1s, height 1s; /* Apply transitions to width and height changes */
+    animation: resizeAnimationtable 1.5s forwards;
+  }
+  @keyframes resizeAnimationtable {
+    0% {
+      width: 0px;
+      height: 0px;
+    }
+    100% {
+      width: 18.875em;
+    height: 30.875em;
+    }
   }
   
   .container .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
    
   }
   
-  
-  
-  /* .container .box div strong {
-    display: block;
-    margin-bottom: .5rem;
-  }
-   */
-  /* .container .box div p {
-    margin: 0;
-    font-size: .9em;
-    font-weight: 300;
-    letter-spacing: .1em;
-  } */
-  
-  /* .container .box div span {
-    font-size: .7rem;
-    font-weight: 300;
-  } */
-  
-  /* .container .box div span:nth-child(3) {
-    font-weight: 500;
-    margin-right: .2rem;
-  } */
-  
+ 
   .container .box:hover {
     box-shadow: 0px 0px 20px 1px #ffbb763f;
     border: 1px solid rgba(255, 255, 255, 0.454);
   }  
 
   .steel{
-    background-image: url("../assets/meter_bac.jpg");
+    /* background-image: url("../assets/meter_bac.jpg"); */
+    background-color: rgba(255, 255, 255, 0.074);
+    /* border: 1px solid rgba(255, 255, 255, 0.222); */
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 0px 20px 1px #ffbb763f;
+    border: 1px solid rgba(255, 255, 255, 0.454);
+    border-radius: 0.7rem;
     width: 300px;
     display: flex;
     align-items: center;
@@ -102,6 +123,7 @@ body {
       
       font-family: 'Press Start 2P', cursive;
       background-color:black;
+      
       display: flex;
       justify-content: center;
       align-items: center;
@@ -142,14 +164,29 @@ body {
     
     border-radius: 50%;
     border: 2px solid white;
-    
+  cursor: pointer;
 
   }
   button:hover{
     box-shadow: 0 0 30px #B01001;
   }
-.rows{
-    border-spacing: 100px 0px;
+
+.disable{
+  opacity: 0.5;
+  cursor: auto;
+}
+.disable:hover{
+  box-shadow: none;
+}
+td{
+  padding: 0 35px;
+}
+td p{
+  line-height: 2px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+
 }
 
  
