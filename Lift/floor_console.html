@@ -2,7 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="./styles/floor_console.css">
-  <script src="script.js"></script>
+  <script src="enter_lift_no.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
     </div> -->
     
  </div>
- <div class="container">
+ <div class="container" id="inside_lift_console">
     
     <div class="box">
         <table>
@@ -74,7 +74,9 @@
 <div class="steel">
     <div class="meter">
       <img id="down_arrow" src="./assets/down_arrow.png"/>
-        <p id="current_floor">0</p>
+        <p id="curr_floor">
+            <!-- The curuent floor will be displayed here -->
+        </p>
        <img id="up_arrow" src="./assets/up_arrow.png"/>
     </div>
 </body>
