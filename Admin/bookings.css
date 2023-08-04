@@ -61,6 +61,11 @@ body {
     height: 50px;
     width: 70px;
     color: white;
+    border:#21395f;
+    border-radius: 5px;
+    position:absolute;
+    right: 20px;
+    top: 0px;
 
   }
   
