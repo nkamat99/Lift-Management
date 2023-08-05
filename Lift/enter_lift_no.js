@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
           }
       }, 2000);
       
-      const lift= liftFloor;
+      // const lift= liftFloor;
       
     });
     // insideLift(liftFloor);
