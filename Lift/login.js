@@ -9,18 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
       const password = document.getElementById("password").value;
 
-      // Export the roomId value
-      
-
-  
+      // Export the roomId value  
       console.log("Roomno:", roomId);
       // alert("Login sucessful");
       console.log("Password:", password);
-  
-      // const formData = {
-      //   roomno: roomId,
-      //   password: password
-      // };
   
       try {
         const response = await fetch("http://localhost:8080/booking/userLogin", {
@@ -39,14 +31,16 @@ document.addEventListener("DOMContentLoaded", function() {
         const responseData = await response.json();
         console.log("Response from backend:", responseData);
         if(responseData.status !== 200) {
-          // alert(responseData.message)
-          window.location.href = "console.html";
+          if(responseData.message=="Login successful")
+          {
+            window.location.href = "console.html";
+          }
+          else{
+            alert(responseData.message);
+          }
         }
       } catch (error) {
         console.log("Error:", error);
       }
     });
   });
-  
-
-  // export { roomId };

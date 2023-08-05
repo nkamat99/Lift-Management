@@ -1,21 +1,22 @@
 <!DOCTYPE html>
+
 <head>
-    <link rel="stylesheet" href="./styles/login.css"> 
-    <link rel="stylesheet" href="./styles/console.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handjet&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/login.css">
+  <link rel="stylesheet" href="./styles/console.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Handjet&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./styles/Direct.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Handjet&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/Direct.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Handjet&family=Press+Start+2P&display=swap" rel="stylesheet">
 
-    <script src="../Lift/js/console_trial.js"></script>
-    <!-- <script src="lift_access_level.js"></script> -->
-    
+  <script src="../Lift/js/console_trial.js"></script>
+  <!-- <script src="lift_access_level.js"></script> -->
+
 
 </head>
 
@@ -24,170 +25,29 @@
     <img id="down_arrow" src="./assets/down_arrow.png"/>
       <p id="p">
          The current floor will be displayed here -->
-      <!-- </p>
+  <!-- </p>
      <img id="up_arrow" src="./assets/up_arrow.png"/>
-  </div> --> 
-    <div class="metal">
-        <div class="container">
-            <form class="form" id="formid" >
-                <div class="form_front"> 
-                    <div class="form_details" style = "top:-30px; position: relative;" >
-                        <p><span style="padding-right: 15px">CAPACITY</span> 8 persons</p>
-                        <p><span style="padding-right: 42px">LOAD</span> 680 kgs</p>
-                    </div>
-                    <input type="number" class = "input" id = "input" placeholder = "Number of people entering the lift" required min="1" max="8" style="top:-10px; position:relative">
-                    <input type = "number" class = "input" id = "floor" placeholder = "Enter current floor" required min = "0" max="7" style="position:relative; top:-10px;"  >
-                  
-                    <input type="submit" value="submit">
-                </div>
-                
-                
-                <!-- <input type="image" src="styles/arrows.png" id="arrow" class="arrow"> -->
-            </form>
+  </div> -->
+  <div class="metal">
+    <div class="container">
+      <form class="form" id="formid">
+        <div class="form_front">
+          <div class="form_details" style="top:-30px; position: relative;">
+            <p><span style="padding-right: 15px">CAPACITY</span> 8 persons</p>
+            <p><span style="padding-right: 42px">LOAD</span> 680 kgs</p>
+          </div>
+          <input type="number" class="input" id="input" placeholder="Number of people entering the lift" required
+            min="1" max="8" style="top:-10px; position:relative">
+          <input type="number" class="input" id="floor" placeholder="Enter current floor" required min="0" max="7"
+            style="position:relative; top:-10px;">
+
+          <input type="submit" value="submit">
         </div>
+
+
+        <!-- <input type="image" src="styles/arrows.png" id="arrow" class="arrow"> -->
+      </form>
     </div>
-    
+  </div>
+
 </body>
-                    <!-- <div id="select-box">
-                <input type="checkbox" id="options-view-button" />
-                <div id="select-button" class="section">
-                  <div id="selected-value" style="color: #999;">
-                    <span>Select current floor</span>
-                  </div>
-                </div>
-                <div id="options">
-                  <div class="option">
-                    <input
-                      class="s-c top"
-                      type="radio"
-                      name="platform"
-                      value="0"
-                    />
-                    <input
-                      class="s-c bottom"
-                      type="radio"
-                      name="platform"
-                      value="0"
-                    />
-                    <span class="label">0</span>
-                    <span class="opt-val">0</span>
-                  </div>
-                  <div class="option">
-                    <input
-                      class="s-c top"
-                      type="radio"
-                      name="platform"
-                      value="1"
-                    />
-                    <input
-                      class="s-c bottom"
-                      type="radio"
-                      name="platform"
-                      value="1"
-                    />
-                    <span class="label">1</span>
-                    <span class="opt-val">1</span>
-                  </div>
-                  <div class="option">
-                    <input
-                      class="s-c top"
-                      type="radio"
-                      name="platform"
-                      value="2"
-                    />
-                    <input
-                      class="s-c bottom"
-                      type="radio"
-                      name="platform"
-                      value="2"
-                    />
-                    <span class="label">2</span>
-                    <span class="opt-val">2</span>
-                  </div>
-                  <div class="option">
-                    <input
-                      class="s-c top"
-                      type="radio"
-                      name="platform"
-                      value="3"
-                    />
-                    <input
-                      class="s-c bottom"
-                      type="radio"
-                      name="platform"
-                      value="3"
-                    />
-                    <span class="label">3</span>
-                    <span class="opt-val">3</span>
-                  </div>
-                  <div class="option">
-                    <input
-                      class="s-c top"
-                      type="radio"
-                      name="platform"
-                      value="4"
-                    />
-                    <input
-                      class="s-c bottom"
-                      type="radio"
-                      name="platform"
-                      value="4"
-                    />
-                    <span class="label">4</span>
-                    <span class="opt-val">4</span>
-                  </div>
-                  <div class="option">
-                    <input
-                      class="s-c top"
-                      type="radio"
-                      name="platform"
-                      value="5"
-                    />
-                    <input
-                      class="s-c bottom"
-                      type="radio"
-                      name="platform"
-                      value="5"
-                    />
-        
-                    <span class="label">5</span>
-                    <span class="opt-val">5</span>
-                  </div>
-                  <div class="option">
-                    <input
-                      class="s-c top"
-                      type="radio"
-                      name="platform"
-                      value="6"
-                    />
-                    <input
-                      class="s-c bottom"
-                      type="radio"
-                      name="platform"
-                      value="6"
-                    />
-        
-                    <span class="label">6</span>
-                    <span class="opt-val">6</span>
-                  </div>
-                  <div class="option">
-                    <input
-                      class="s-c top"
-                      type="radio"
-                      name="platform"
-                      value="7"
-                    />
-                    <input
-                      class="s-c bottom"
-                      type="radio"
-                      name="platform"
-                      value="7"
-                    />
-        
-                    <span class="label">7</span>
-                    <span class="opt-val">7</span>
-                  </div>
-                  <div id="option-bg"></div>
-                </div>
-            </div>-->
-              
