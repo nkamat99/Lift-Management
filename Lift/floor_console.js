@@ -80,7 +80,7 @@ async function fetchDataAndDisplay() {
       if(direction == -1 ){
         document.getElementById("up_arrow").style.visibility='hidden';
       }
-      else{
+      else if(direction == 1 ){
         document.getElementById("down_arrow").style.visibility='hidden';
       }
 
