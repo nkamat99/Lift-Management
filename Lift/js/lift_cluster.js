@@ -58,12 +58,13 @@ if(direction == -1 ){
           console.log("Current Lift Floor:", currentFloor);
       } else {
         // console.log("abc");
+        p.style.color="green";
         sessionStorage.setItem(currentFloor,'floor')
-        
+        setTimeout(2000);
     window.location.href= "Doors.html";
           clearInterval(interval);
       }
-  }, 2000);
+  }, 3000);
   
 });
 
