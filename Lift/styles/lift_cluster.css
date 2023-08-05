@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../assets/lift_cluster.jpg");
+    background-repeat: no-repeat;
+background-size: 100vw 100vh;
+    min-height: 100vh;
+  }
+  /* #lift_01{
+  
+   
+  }
+  #lift_02{
+   
+  } */
+  .meter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+    margin-top: 35px;
+  }
+  #meter_01,#meter_02{
+
+    font-family: 'Press Start 2P', cursive;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    gap: 40px;
+    font-size: 20px;
+  line-height: 0px;
+    color: #B00101;
+
+}
+.steel{
+background-image: url("../assets/meter_bac.jpg");
+height: 50px;
+width: 185px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0 10px;
+}
+.elevator{
+    display: flex;
+    flex-direction: row;
+    gap:180px;
+    
+}
+.down_arrow,.up_arrow{
+    width: 30px;
+    height: 30px;
+}
+  
