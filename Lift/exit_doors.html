@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("../Lift/assets/Floor_console.jpg"); 
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    height: 100vh; 
+}
+div{
+    margin: 0;
+    padding: 0;
+   
+}
+img {
+  height: 100vh; 
+}
+
+#right{
+
+    animation-duration: 5s;
+    animation-name: rightslide ; 
+    z-index: 10;
+    height: 100vh; 
+  
+  }
+  @keyframes rightslide {
+    from {
+      margin-left: 0%;
+      width: 50%;
+    }
+  
+    to {
+      margin-left: 100%;
+      width: 0%;
+      display: none;
+    }
+  }
+  #left{
+    animation-duration: 5s;
+    animation-name: leftslide;
+   z-index: 10;
+   height: 100vh; 
+    
+  }
+  @keyframes leftslide {
+    to {
+      margin-left:-50%;
+      width: 50%;
+      display: none;
+    }
+  
+    from{
+      margin-right: 50%;
+      width: 0%;
+    }
+  }
+  #back{
+   z-index: -1;
+  }
+  
+    </style>
+</head>
+
+<body>
+   
+      <div id="left">
+        <img src="./assets/meter_bac.jpg">
+    </div>
+    <div id="right">
+        <img src="./assets/meter_bac.jpg">
+    </div>
+
+    <script src="./js/exit_doors.js"> </script>
+       
+   
+</body>
+
