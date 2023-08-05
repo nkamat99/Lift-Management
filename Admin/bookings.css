@@ -5,18 +5,94 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
     height: 100vh;
   }
-  /* sidebar */
-.profile-sidebar {
-  display: flex;
-  background-color: white;
-height: 100vh;
-  color: black;
-  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2); /* Apply box shadow on the left side */
-}
+  /* Top bar */
+  .top-bar{
+    position: fixed;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 100;
+    border-bottom: #f2f2f2 1px solid;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    z-index: 1;
+  }
+  .top-bar img{
+    height: 40px;
+    margin-right: 2%;
+    border-radius: 50%;
 
+  }
+  .top-bar :hover{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    height: 42px;
+  }
+  /* alert */
+  .popup-div {
+    width: 100px;
+    background-color: white;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 1s, transform 1s;
+    animation: popupAnimation 1s ease-out forwards;
+    border: black 5px solid;
+    position: absolute;
+    top: 10;
+    left:80;
+    visibility: hidden;
+  }
+  
+  .popup-div p {
+    margin: 0;
+    padding: 20px;
+  }
+  
+  @keyframes popupAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  /* sidebar */
+#profile-sidebar {
+  display: none;
+  background-color: white;
+height: 70vh;
+  color: black;
+  opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 1s, transform 1s;
+    animation: popupAnimation 1s ease-out forwards;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  position: absolute;
+margin-top: 50px;
+margin-right: 10px;
+  right: 0; /* Apply box shadow on the left side */
+}
+.display{
+  display: flex !important;
+}
+@keyframes popupAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .profile-info {
   padding: 20px;
 }
@@ -59,6 +135,8 @@ height: 100vh;
     border: 1px solid #ccc;
     background-color: #fff;
     border-radius: 10px;
+    margin-top: 10%;
+    
   }
   
   .data-table th,
