@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bookings.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handjet&family=Oswald:wght@300&family=Poppins:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Bookings</title>
    
 </head>
@@ -11,18 +14,13 @@
 
   <div id="profile-sidebar">
     <div class="profile-info">
-      <img src="../Lift/assets/account.png" alt="Profile Image">
+      <img src="../Lift/assets/profile_pic.png" alt="Profile Image">
       <h2>User Name</h2>
       <p>Web Developer</p>
+       <a href="admin_login.html">
+    <button  type = "button" class = "button">Logout</button>
+  </a>
     </div>
-    <nav class="sidebar-nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Messages</a></li>
-        <li><a href="#">Settings</a></li>
-      </ul>
-    </nav>
   </div>
   <button class="top-bar" onclick="trigger()">
     <img src="../Lift/assets/account.png" />
@@ -40,11 +38,10 @@
     </thead>
     <tbody id="table-body">
       <!-- Table data will be inserted here -->
+    
     </tbody>
   </table>
-  <!-- <a href="admin_login.html">
-    <button  type = "button" class = "button">Sign Out</button>
-  </a> -->
+ 
   <!-- <div class="popup-div" >
     <p>alert</p>
   </div> -->
