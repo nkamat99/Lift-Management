@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", async function() {
       const data = await response.json();
 
       console.log(data);
-      // console.log(data[0])
 
       // data.userData.forEach(booking => {
       //   console.log(booking.roomId);
@@ -30,10 +29,10 @@ document.addEventListener("DOMContentLoaded", async function() {
           <td>${booking.roomId}</td>
           <td>${booking.userName}</td>
           <td>${booking.accessLvl}</td>
-          <td>${booking.extraAccess.join(' , ')}</td>
+          <td>${booking.extraAccess.join(', ')}</td>
           <td>${booking.addedBy}</td>
           <td>
-            <button class="btn-update" data-room="${booking.roomNumber}" data-user="${booking.user}" data-access="${booking.accessLevel}" data-floors="${booking.additionalFloors || ''}" data-updatedby="${booking.updatedBy}">Update</button>
+            <button class="btn-update" data-room="${booking.roomId}" data-user="${booking.userName}" data-access="${booking.accessLvl}" data-floors="${booking.extraAccess.join(', ')}" data-updatedby="${booking.addedBy}">Update</button>
             <button class="btn-delete">Delete</button>
           </td>
         `;
@@ -43,14 +42,15 @@ document.addEventListener("DOMContentLoaded", async function() {
       const updateButtons = document.querySelectorAll(".btn-update");
       updateButtons.forEach(button => {
         button.addEventListener("click", function() {
-          const roomNumber = button.getAttribute("data-room");
-          const user = button.getAttribute("data-user");
-          const accessLevel = button.getAttribute("data-access");
-          const additionalFloors = button.getAttribute("data-floors");
-          const updatedBy = button.getAttribute("data-updatedby");
+          const roomId = button.getAttribute("data-room");
+          const userName = button.getAttribute("data-user");
+          const accessLvl = button.getAttribute("data-access");
+          const extraAccess = button.getAttribute("data-floors");
+          const addedBy = button.getAttribute("data-updatedby");
   
           // Redirect to the update details page with pre-filled data
-          const queryString = `?room=${roomNumber}&user=${user}&access=${accessLevel}&floors=${additionalFloors}&updatedBy=${updatedBy}`;
+          const queryString = `?roomId=${roomId}&userName=${userName}&accessLvl=${accessLvl}&extraAccess=${extraAccess}&addedBy=${addedBy}`;
+          console.log(queryString);
           window.location.href = `update_details.html${queryString}`;
         });
       });
