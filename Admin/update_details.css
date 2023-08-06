@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #87bdf1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-image: url('https://q-xx.bstatic.com/xdata/images/hotel/max1200/17173782.jpg?k=741c80ecda52c527bdcba7756c51ac618f3e7c40416b3cf58aa68e0753edbda5&o=');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: multiply; */
+  }
+  
+  /* .login-container {
+    background-color: #21395f;
+    padding: 60px 90px;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgb(28, 4, 66);
+  } */
+  
+  .login {
+    color: #87bdf1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* display: block; */
+    font-weight: bold;
+    font-size: x-large;
+  }
+  .room_no{
+    
+      color: #87bdf1;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: block;
+      font-weight: bold;
+      font-size:medium;
+    text-align: center;
+    
+  }
+  
+  /* .login-container h3 {
+    text-align: center;
+    /* margin-bottom: 3rem; */
+    /* color: #ffffff;
+  } */ 
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    width: 350px;
+    flex-direction: column;
+    gap: 35px;
+    background: #21395f;
+    box-shadow: 6px 6px 32px #c8c8c8,
+          6px 6px 32px #fefefe;
+    border-radius: 8px;
+   
+  }
+  
+  
+  
+  .inputBox {
+    position: relative;
+    width: 250px;
+    margin-bottom: 30px;
+  }
+  .inputBox input ,select{
+    width: 250px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: #87bdf1;
+    border: 2px solid #87bdf1;
+    border-radius: 8px;
+    font-size: 1em;
+    background: transparent;
+    transition: 0.1s;
+    border-bottom-left-radius: 8px;
+  }
+  .inputBox select{
+    width: 110%;
+  }
+  .inputBox span {
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(113px) translateY(-15px);
+    margin-left: 10px;
+    padding: 5px;
+    pointer-events: none;
+    font-size: 12px;
+    color: black;
+    background: #87bdf1;
+  
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 3px;
+    border-radius: 8px;
+  }
+  .inputBox input:valid~span,
+  .inputBox input:focus~span ,.inputBox select:valid~span{
+   
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background: #87bdf1;
+    letter-spacing: 0.2em;
+    
+  }
+ 
+    .enter {
+      height: 40px;
+      width: 100px;
+      border-radius: 5px;
+      border: 2px solid #87bdf1;
+      cursor: pointer;
+      background-color: transparent;
+      transition: 0.5s;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-bottom: 2.5em;
+      color: #87bdf1;
+    }
+    
+    .enter:hover {
+      background-color: #87bdf1;
+      color: black;
+    }
+    
+  
+  /* .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  } */
+  
+  /* ::placeholder {
+    color: white;
+    opacity: 1;
+  }
+  
+  :-ms-input-placeholder {
+    color: white;
+  }
+  
+  ::-ms-input-placeholder {
+    color: white;
+  } */
+  /* 
+  .form-group input, 
+  .form-group select{
+    margin-right:23px;
+    margin-top:20px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px #0f0c5ea0;
+    border-radius: 3px;
+    width: 245px;
+    background-color: #87bdf1;
+    background-image: linear-gradient(180deg, black -27%, #2c4975a3 22%, transparent);
+    background-blend-mode: difference;
+    color: #043747;
+  }
+  
+  .form-group button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: #21395f;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 6px 6px 10px black,
+    1px 1px 10px rgba(255, 255, 255, 0.6);
+  }
+  
+  .form-group button:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 10px rgb(5, 5, 5),
+    1px 1px 10px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 10px rgb(60, 225, 82),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+  }*/
+  
+  .backbtn {
+    background-color: #4CAF50;
+    color: white;
+    height: 50px;
+    width: 90px;
+    border:#21395f;
+    border-radius: 5px;
+    position:absolute;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    box-shadow: 6px 6px 10px black,
+    1px 1px 10px rgba(255,255,255,0.6);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+  
+  }
+  
+  .backbtn:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 10px rgb(5, 5, 5),
+    1px 1px 10px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 10px rgb(60, 225, 82),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+  
+  
+  }
+  
+  /* .input {
+    width:245px;
+    min-height: 45px;
+    color:#21395f;
+    outline:none;
+    transition:0.35s;
+    margin-top:15px;
+    background-color:#87bdf1;
+    border-radius: 6px;
+    border: 2px solid #043747;
+    box-shadow: 6px 6px 10px black,
+    1px 1px 5px rgba(255, 255, 255, 0.6);
+  }
+  
+  .input::placeholder {
+    color: #043747;
+  }
+  
+  .input:focus.input::placeholder {
+    transition: 0.3s;
+    opacity: 0;
+  }
+  
+  .input:focus {
+    transform:scale(1.05);
+    box-shadow: 6px 6px 5px #21395f,
+    1px 1px 10px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 5px #21395f,
+    inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+  }
+    */
+  

@@ -82,6 +82,7 @@ body {
   transition: 0.1s;
   border-bottom-left-radius: 8px;
 }
+
 .inputBox span {
   margin-top: 5px;
   position: absolute;
