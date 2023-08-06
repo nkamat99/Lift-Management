@@ -1,14 +1,22 @@
 document.addEventListener("DOMContentLoaded", async function() {
 // Get the stored session variable 'floor'
 let desired_floor = sessionStorage.getItem('floor');
+let current_floor_lift_01 = parseInt(sessionStorage.getItem('lift_01'));
+console.log("lift 1 position:",current_floor_lift_01);
+lift1.textContent = current_floor_lift_01.toString();
+let current_floor_lift_02 = parseInt(sessionStorage.getItem('lift_02'));
+// let current_floor_lift_02 = sessionStorage.getItem('lift_02');
+console.log("lift 2 position:",current_floor_lift_02);
+lift2.textContent = current_floor_lift_02.toString();
+
 
 console.log("floor sent :",desired_floor);
 
 // Initialize current floor variables for both lifts
-const current_floor_lift_01 = 0;
-const current_floor_lift_02 = 5;
-sessionStorage.setItem(current_floor_lift_01,"lift_01");
-sessionStorage.setItem(current_floor_lift_02,"lift_02");
+// const current_floor_lift_01 = 0;
+// const current_floor_lift_02 = 5;
+// sessionStorage.setItem(current_floor_lift_01,"lift_01");
+// sessionStorage.setItem(current_floor_lift_02,"lift_02");
 // Calculate the absolute differences between 'floor' and the current floors of the lifts
 const diff_lift_01 = desired_floor - current_floor_lift_01;
 const diff_lift_02 = desired_floor - current_floor_lift_02;
@@ -32,12 +40,16 @@ if(closest_lift == 1){
  parentElement = document.getElementById('meter_01');
  currentFloor=current_floor_lift_01;
  sessionStorage.setItem(desired_floor,"lift_01");
+ let moving = "lift1"
+ sessionStorage.setItem('lift_in_motion',moving);
     
 }
 else{
     parentElement = document.getElementById('meter_02');
     currentFloor=current_floor_lift_02;
     sessionStorage.setItem(desired_floor,"lift_02");
+    let moving = "lift2"
+    sessionStorage.setItem('lift_in_motion',moving);
 }
 p=parentElement.querySelector(".text");
 if(direction == -1 ){

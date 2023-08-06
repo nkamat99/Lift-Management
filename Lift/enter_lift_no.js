@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     // insideLift(liftFloor);
     // export default liftFloor;
-    module.exports=async(liftFloor);
+    // module.exports=async(liftFloor);
 });
 
 

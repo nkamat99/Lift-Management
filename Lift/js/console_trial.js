@@ -11,6 +11,29 @@ document.addEventListener("DOMContentLoaded", function() {
   
       const noOfPeople = parseInt(document.getElementById("input").value);
       const currentFloor = parseInt(document.getElementById("floor").value);  // where the user is currently
+      // to check if the lift1 is at initial position or not
+      if(sessionStorage.getItem('lift_01')== null){
+        let current_floor_lift_01 = 0;  
+        sessionStorage.setItem('lift_01', current_floor_lift_01);
+        // console.log("ab", current_floor_lift_01)
+      }
+      else{
+        let current_floor_lift_01 = sessionStorage.getItem('lift_01');
+        // console.log("lift1",current_floor_lift_01)
+      }
+
+      // to check if the lift1 is at initial position or not
+      if(sessionStorage.getItem('lift_02')== null){
+        let current_floor_lift_02 = 5;  
+        sessionStorage.setItem('lift_02', current_floor_lift_02);
+        // console.log("cd",current_floor_lift_02)
+      }
+      else{
+        let current_floor_lift_02 = sessionStorage.getItem('lift_02');
+        // console.log("lift2",current_floor_lift_02)
+      }
+
+
       sessionStorage.setItem('floor',currentFloor);
 
       console.log("Number of People:", noOfPeople);

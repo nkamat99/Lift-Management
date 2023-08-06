@@ -86,6 +86,15 @@ async function fetchDataAndDisplay() {
 
       currentFloor = parseInt(currentFloor);
       targetFloor = parseInt(targetFloor);
+      if(sessionStorage.getItem('lift_in_motion') == "lift1"){
+        console.log("Lift 1 in motion");
+        sessionStorage.setItem('lift_01',targetFloor);
+      }
+      else{
+        console.log("Lift 2 in motion");
+        sessionStorage.setItem('lift_02',targetFloor);
+      }
+    
 
       const interval = setInterval(function() {
           if (currentFloor !== targetFloor) {

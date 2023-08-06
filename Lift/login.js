@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(responseData.status !== 200) {
           if(responseData.message=="Login successful")
           {
+            // console.log("ab", current_floor_lift_01)
             window.location.href = "console.html";
           }
           else{
