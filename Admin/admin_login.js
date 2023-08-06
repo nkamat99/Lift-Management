@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
       event.preventDefault();
   
       const staffName = document.getElementById("username").value;
+      sessionStorage.setItem('staffName',staffName);
       const password = document.getElementById("password").value;
   
       try {

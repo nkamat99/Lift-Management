@@ -6,7 +6,7 @@ body {
     justify-content: center;
     overflow: hidden;
     height: 100vh;
-
+    overflow: auto;
   }
   /* Top bar */
   .top-bar{

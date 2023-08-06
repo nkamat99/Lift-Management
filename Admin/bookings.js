@@ -1,18 +1,37 @@
 document.addEventListener("DOMContentLoaded", async function() {
     const tableBody = document.getElementById("table-body");
+    staffName = sessionStorage.getItem('staffName');
   
     try {
-      const response = await fetch("/api/bookings"); // Replace with your backend API URL
+      const response = await fetch("http://localhost:8080/booking/findBookingList", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ staffName }),
+      });
       const data = await response.json();
+
+      console.log(data);
+      // console.log(data[0])
+
+      // data.userData.forEach(booking => {
+      //   console.log(booking.roomId);
+      //   console.log(booking.userName);
+      //   console.log(booking.accessLvl);
+      //   console.log(booking.extraAccess.join(','));
+      //   console.log(booking.addedBy);
+
+      // })
   
-      data.forEach(booking => {
+      data.userData.forEach(booking => {
         const row = document.createElement("tr");
         row.innerHTML = `
-          <td>${booking.roomNumber}</td>
-          <td>${booking.user}</td>
-          <td>${booking.accessLevel}</td>
-          <td>${booking.additionalFloors || '-'}</td>
-          <td>${booking.updatedBy}</td>
+          <td>${booking.roomId}</td>
+          <td>${booking.userName}</td>
+          <td>${booking.accessLvl}</td>
+          <td>${booking.extraAccess.join(' , ')}</td>
+          <td>${booking.addedBy}</td>
           <td>
             <button class="btn-update" data-room="${booking.roomNumber}" data-user="${booking.user}" data-access="${booking.accessLevel}" data-floors="${booking.additionalFloors || ''}" data-updatedby="${booking.updatedBy}">Update</button>
             <button class="btn-delete">Delete</button>
@@ -36,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         });
       });
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error:");
     }
   });
   
