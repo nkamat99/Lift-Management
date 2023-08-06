@@ -7,51 +7,143 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('https://q-xx.bstatic.com/xdata/images/hotel/max1200/17173782.jpg?k=741c80ecda52c527bdcba7756c51ac618f3e7c40416b3cf58aa68e0753edbda5&o=');
+  /* background-image: url('https://q-xx.bstatic.com/xdata/images/hotel/max1200/17173782.jpg?k=741c80ecda52c527bdcba7756c51ac618f3e7c40416b3cf58aa68e0753edbda5&o=');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-blend-mode: multiply;
+  background-blend-mode: multiply; */
 }
 
-.login-container {
+/* .login-container {
   background-color: #21395f;
   padding: 60px 90px;
   border-radius: 5px;
   box-shadow: 5px 5px rgb(28, 4, 66);
-}
+} */
 
-.login-container h2 {
+.login {
+  color: #87bdf1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  font-weight: bold;
+  font-size: x-large;
+}
+.room_no{
+  
+    color: #87bdf1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: bold;
+    font-size:medium;
   text-align: center;
-  margin-bottom: 2rem;
-  color: #ffffff;
-  text-shadow: 0.2px 1.2px;
+  
 }
 
-.login-container h3 {
+/* .login-container h3 {
   text-align: center;
   /* margin-bottom: 3rem; */
-  color: #ffffff;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group {
-  margin-bottom: 15px;
+  /* color: #ffffff;
+} */ 
+.card {
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  width: 350px;
+  flex-direction: column;
+  gap: 35px;
+  background: #21395f;
+  box-shadow: 6px 6px 32px #c8c8c8,
+        6px 6px 32px #fefefe;
+  border-radius: 8px;
+ 
 }
 
+
+
+.inputBox {
+  position: relative;
+  width: 250px;
+  margin-bottom: 30px;
+}
+.inputBox input ,select{
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #87bdf1;
+
+  font-size: 1em;
+  background: transparent;
+  border-left: 2px solid #87bdf1;
+  border-bottom: 2px solid #87bdf1;
+  transition: 0.1s;
+  border-bottom-left-radius: 8px;
+}
+.inputBox span {
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-4px);
+  margin-left: 10px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 12px;
+  color: #87bdf1;
+
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  border-radius: 8px;
+}
+
+.inputBox input:valid~span,
+  .inputBox input:focus~span ,.inputBox select:valid~span{
+    transform: translateX(113px) translateY(-15px);
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background: #87bdf1;
+    letter-spacing: 0.2em;
+    color: black;
+    border: 2px;
+  }
+  
+  .inputBox input:valid,
+  .inputBox input:focus {
+    border: 2px solid #87bdf1;
+    border-radius: 8px;
+  }
+  
+  .enter {
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid #87bdf1;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 1em;
+    color: #87bdf1;
+  }
+  
+  .enter:hover {
+    background-color: #87bdf1;
+    color: black;
+  }
+  
 
 /* .form-group label {
   display: block;
   margin-bottom: 5px;
 } */
 
-::placeholder {
+/* ::placeholder {
   color: white;
   opacity: 1;
 }
@@ -62,18 +154,18 @@ body {
 
 ::-ms-input-placeholder {
   color: white;
-}
-
+} */
+/* 
 .form-group input, 
 .form-group select{
   margin-right:23px;
   margin-top:20px;
   border: 1px solid black;
-  /* box-shadow: 2px 2px 2px 2px #0f0c5ea0; */
+  box-shadow: 2px 2px 2px 2px #0f0c5ea0;
   border-radius: 3px;
   width: 245px;
   background-color: #87bdf1;
-  /* background-image: linear-gradient(180deg, black -27%, #2c4975a3 22%, transparent); */
+  background-image: linear-gradient(180deg, black -27%, #2c4975a3 22%, transparent);
   background-blend-mode: difference;
   color: #043747;
 }
@@ -96,7 +188,7 @@ body {
   1px 1px 10px rgba(255, 255, 255, 0.6),
   inset 2px 2px 10px rgb(60, 225, 82),
   inset -1px -1px 5px rgba(255, 255, 255, 0.6);
-}
+}*/
 
 .backbtn {
   background-color: #4CAF50;
@@ -127,7 +219,7 @@ body {
 
 }
 
-.input {
+/* .input {
   width:245px;
   min-height: 45px;
   color:#21395f;
@@ -157,4 +249,4 @@ body {
   inset 2px 2px 5px #21395f,
   inset -1px -1px 5px rgba(255, 255, 255, 0.6);
 }
-
+  */
