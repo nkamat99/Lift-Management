@@ -2,6 +2,7 @@ const animatedDiv = document.getElementById('left');
 document.addEventListener('DOMContentLoaded', () => {
     var music = new Audio('../Lift/assets/elevator_door.mp3');
     let isPlaying = false;
+ 
    
     if (isPlaying) {
         music.pause();
