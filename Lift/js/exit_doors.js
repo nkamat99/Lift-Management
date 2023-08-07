@@ -1,6 +1,15 @@
 const animatedDiv = document.getElementById('left');
 document.addEventListener('DOMContentLoaded', async function() {
-  var floor=sessionStorage.getItem('floor');
+  var floor;
+  if(sessionStorage.getItem('lift_in_motion') == "lift1"){
+    console.log("Lift 1 in motion");
+   floor= sessionStorage.getItem('lift_01');
+  }
+  else{
+    console.log("Lift 2 in motion");
+    floor= sessionStorage.getItem('lift_02');
+  }
+ 
   console.log("floor:",floor);
   if(floor >=1 && floor<=5 ){
     console.log("floor:",floor);

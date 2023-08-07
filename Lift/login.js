@@ -37,11 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
             window.location.href = "console.html";
           }
           else{
-            alert(responseData.message);
+            document.getElementById('alert').style.display='flex';
+            
           }
         }
       } catch (error) {
         console.log("Error:", error);
       }
+      
     });
   });
