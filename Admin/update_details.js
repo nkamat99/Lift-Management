@@ -45,12 +45,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const updateForm = document.getElementById("updateForm");
   updateForm.addEventListener("submit", async function (event) {
     event.preventDefault();
+    // bookingId: string,
+    // accessLvl: number,
+    // extraAccess: Array<number>,
+    // addedBy: string,
+    // userName: string,
+    // roomId: string,
     let addedBy = sessionStorage.getItem('staffName');
-  console.log(typeof(admin));
-  const userField = document.getElementById("user");
+    console.log("admin type", typeof(addedBy));
+    const userName = document.getElementById("user").value;
+    console.log("userName type", typeof(userName));
+    
+    const accessLvl = parseInt(document.getElementById("accesslevel").value);
+    console.log("accessLvl type", typeof(accessLvl));
 
-  const accessField = document.getElementById("accesslevel");
-  const floorsField = document.getElementById("additional_floors");
+    const extraAccess = document.getElementById("additional_floors").value.split(", ").map(Number);
+    console.log("extraAccess type", typeof(extraAccess));
+    console.log(extraAccess);
 
     // addedBy = JSON.stringify(admin);
 

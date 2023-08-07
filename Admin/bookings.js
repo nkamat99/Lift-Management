@@ -66,8 +66,9 @@ document.addEventListener("DOMContentLoaded", async function() {
       deleteButtons.forEach(button => {
         button.addEventListener("click", function() {
           const bookingId = button.getAttribute("data-bookingId");
-          password="abc";
-          deleteBooking(bookingId, password) ;
+          // password="abc";
+          addedBy = sessionStorage.getItem('staffName');
+          deleteBooking(bookingId, addedBy) ;
 
           // try {
           //   const response = await fetch("http://localhost:8080/booking/deleteUser", { // Replace with your backend login API URL
@@ -98,7 +99,7 @@ document.addEventListener("DOMContentLoaded", async function() {
       console.error("Error:",error);
     }
 
-    async function deleteBooking(bookingId, password) {
+    async function deleteBooking(bookingId, addedBy) {
       try {
         const response = await fetch("http://localhost:8080/booking/deleteUser", { // Replace with your backend login API URL
           method: "POST",
@@ -106,17 +107,30 @@ document.addEventListener("DOMContentLoaded", async function() {
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify({bookingId})
+          body: JSON.stringify({bookingId, addedBy})
         });
   
         const responseData = await response.json();
+        console.log(responseData);
         
-        if (responseData.message == 'successful') {
-          console.log("Successfully deleted");
-        } else {
-          // Invalid login, show error message
-          alert("Error deleting. Please try again");
+        const confirmMessage = `Are you sure you want to delete this entry?`;
+        const userConfirmed = window.confirm(confirmMessage);
+        if(userConfirmed)
+        {
+          if (responseData.message == 'successful') {
+            console.log("Successfully deleted");
+            window.location.href = "bookings.html";
+          } else {
+            // Invalid login, show error message
+            alert("Error deleting. Please try again");
+          }
         }
+        else
+        {
+          // window.location.href = "bookings.html";
+          console.log("User cancelled delete");
+        }
+        
       } catch (error) {
         console.error("Error:", error);
       }
