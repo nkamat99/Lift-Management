@@ -5,8 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="admin_login.css">
     <title>Admin Login</title>
+    <script>
+      function close_alert(){
+      document.getElementById('alert').style.display='none';
+    }
+  </script>
 </head>
 <body>
+  <div  id="alert">
+    <img id="cookieimg" src="../Lift/assets/caution.png">
+      <p class="cookieDescription">Invalid Credentials</p>
+    
+      <div class="buttonContainer">
+        <button class="acceptButton" onclick="close_alert()">OK</button>
+     
+      </div>
+      
+    
+    </div>
+    
     
     <div class="login-container">
       <div class="card">

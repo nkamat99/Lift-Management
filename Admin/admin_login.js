@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
           window.location.href = "bookings.html";
         } else {
           // Invalid login, show error message
-          alert("Invalid username or password. Please try again.");
+          document.getElementById('alert').style.display='flex';
+          // alert("Invalid username or password. Please try again.");
         }
       } catch (error) {
         console.error("Error:", error);
