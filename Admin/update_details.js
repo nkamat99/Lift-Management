@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
     let addedBy = sessionStorage.getItem('staffName');
   console.log(typeof(admin));
-  // userName = userField.value ;
   const userField = document.getElementById("user");
 
   const accessField = document.getElementById("accesslevel");

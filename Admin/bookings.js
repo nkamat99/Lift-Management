@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", async function() {
       console.log(data);
 
       // data.userData.forEach(booking => {
-      //   console.log(booking.roomId);
       //   console.log(booking.userName);
       //   console.log(booking.accessLvl);
       //   console.log(booking.extraAccess.join(','));
@@ -28,6 +27,7 @@ document.addEventListener("DOMContentLoaded", async function() {
       data.userData.forEach(booking => {
         console.log("abc")
         const row = document.createElement("tr");
+        console.log("bookingID", booking.bookingId);
         row.innerHTML = `
           <td>${booking.roomId}</td>
           <td>${booking.userName}</td>
