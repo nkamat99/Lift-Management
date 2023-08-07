@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   }
  
   console.log("floor:",floor);
-  if(floor >=1 && floor<=5 ){
+  if(floor >=0 && floor<=5 ){
     console.log("floor:",floor);
     // Change the background color of the body after 3 seconds:done
 

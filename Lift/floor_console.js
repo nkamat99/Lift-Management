@@ -17,7 +17,7 @@ async function fetchDataAndDisplay() {
       console.log('Response from backend:', responseData);
 
       accessFloors = responseData.AccessDetails;
-
+      console.log(accessFloors);
       // document.addEventListener("DOMContentLoaded", function() {
       // accessFloors = [2, 4, 7, 1];
         for(let j=1; j<8; j++)
