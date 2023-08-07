@@ -100,7 +100,15 @@ async function fetchDataAndDisplay() {
           if (currentFloor !== targetFloor) {
             currentFloor += direction;
             current_floor.textContent = currentFloor.toString();
+            // this will be used incase the alarm is called
+            sessionStorage.setItem('current_lift_position', currentFloor)
               console.log("Current Lift Floor:", currentFloor);
+              document.getElementById("alert_btn").addEventListener("click", () => {
+                console.log("button clicked and stopping floor is ", currentFloor)
+                           
+                alarm(currentFloor);
+                clearInterval(interval);
+              });
           } else {
             console.log("abc");
               window.location.href= "exit_doors.html";
@@ -109,6 +117,29 @@ async function fetchDataAndDisplay() {
       }, 2000);
      
   }
+
+  function alarm(currentFloor) {
+    // This wait of 3 secs is not working
+    // setTimeout(function() {
+    //   console.log("3 seconds have passed");
+    // }, 3000); 
+    console.log("currentFloor lift stopping", currentFloor);
+    const current_floor = document.getElementById('current_floor');
+    
+    if(sessionStorage.getItem('lift_in_motion') == "lift1"){
+      console.log("Lift 1 in motion");
+      sessionStorage.setItem('lift_01',currentFloor);
+    }
+    else{
+      console.log("Lift 2 in motion");
+      sessionStorage.setItem('lift_02',currentFloor);
+    }
+    console.log("the lift stops at",currentFloor);
+    current_floor.textContent = currentFloor.toString();
+    
+    window.location.href= "exit_doors.html";
+  }
+
 
   // Call the fetchDataAndDisplay function to initiate the process
   fetchDataAndDisplay();
