@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ staffName }),
+        // body: JSON.stringify({ staffName }),
       });
       const data = await response.json();
 
@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", async function() {
       // })
   
       data.userData.forEach(booking => {
+        console.log("abc")
         const row = document.createElement("tr");
         row.innerHTML = `
           <td>${booking.roomId}</td>
@@ -92,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async function() {
       });
 
     } catch (error) {
-      console.error("Error:");
+      console.error("Error:",error);
     }
 
     async function deleteBooking(bookingId, password) {

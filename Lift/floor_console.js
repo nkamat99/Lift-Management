@@ -29,10 +29,12 @@ async function fetchDataAndDisplay() {
             else{
               console.log("Disable", j);
 
+
               const elements = document.querySelectorAll(`[id="${j}"]`);
 
               elements.forEach(element => {
                 element.classList.add('disable');
+                element.onclick = null;
               });
               
             }
@@ -117,6 +119,11 @@ async function fetchDataAndDisplay() {
       }, 2000);
      
   }
+
+
+  function abc(){
+    console.log("Do nothing");
+   }
 
   function alarm(currentFloor) {
     // This wait of 3 secs is not working
