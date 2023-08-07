@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", async function() {
     const tableBody = document.getElementById("table-body");
+    const logged_in_user = document.getElementById("logged_in_user");
     staffName = sessionStorage.getItem('staffName');
+    logged_in_user.textContent = staffName;
   
     try {
       const response = await fetch("http://localhost:8080/booking/findBookingList", {
