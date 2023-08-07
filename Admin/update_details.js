@@ -1,41 +1,59 @@
 document.addEventListener("DOMContentLoaded", function () {
   const queryParams = new URLSearchParams(window.location.search);
-  const room = queryParams.get("roomId");
-  const user = queryParams.get("userName");
-  const access = queryParams.get("accessLvl");
+  const roomId = queryParams.get("roomId");
+  const userName = queryParams.get("userName");
+  const accessLvl = parseInt(queryParams.get("accessLvl"));
   const floors = queryParams.get("extraAccess");
   const updatedBy = queryParams.get("addedBy");
   const bookingId = queryParams.get("bookingId");
 
-  console.log("Room ID:", room);
-  console.log("User Name:", user);
-  console.log("Access Level:", access);
+  console.log("Room ID:", roomId);
+  console.log("User Name:", userName);
+  console.log("Access Level:", accessLvl);
   console.log("Extra Access:", floors);
   console.log("Updated By:", updatedBy);
 
   const roomField = document.getElementById("roomno");
+
   const userField = document.getElementById("user");
+
   const accessField = document.getElementById("accesslevel");
   const floorsField = document.getElementById("additional_floors");
-  const updatedByField = document.getElementById("updated_by");
+  const addedBy = document.getElementById("updated_by");
   
 
-  roomno.textContent = "ROOM NO. " + room;
-  // roomField.placeholder =  
-  userField.placeholder = user;
-  userField.value = user;
-  accessField.value = access;
+  roomno.textContent = "ROOM NO. " + roomId;
+  userField.placeholder = userName;
+  userField.value = userName;
+  console.log("userField", userField.value);
+
+  accessField.value = accessLvl;
   floorsField.placeholder = floors;
   floorsField.value = floors;
-  updatedByField.placeholder = updatedBy;
-  updatedByField.value = updatedBy;
-  const extraAloorsArray = floors.split(", ").map(Number);
+  addedBy.placeholder = updatedBy;
+  addedBy.value = updatedBy;
+  const extraAccess = floors.split(", ").map(Number);
 
-  console.log("Extra Access array:", extraAloorsArray);
+  console.log(typeof(roomId));
+  console.log(typeof(bookingId));
+  console.log(typeof(accessLvl));
+  console.log(typeof(extraAccess));
+  console.log(typeof(userName));
+
+  console.log("Extra Access array:", extraAccess);
 
   const updateForm = document.getElementById("updateForm");
   updateForm.addEventListener("submit", async function (event) {
     event.preventDefault();
+    let addedBy = sessionStorage.getItem('staffName');
+  console.log(typeof(admin));
+  // userName = userField.value ;
+  const userField = document.getElementById("user");
+
+  const accessField = document.getElementById("accesslevel");
+  const floorsField = document.getElementById("additional_floors");
+
+    // addedBy = JSON.stringify(admin);
 
     const formData = new FormData(updateForm);
     try {
@@ -47,7 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         // room id, booking id
         // body: JSON.stringify({bookingId, access, extraAloorsArray, updatedBy})
-        body: JSON.stringify({bookingId, access, extraAloorsArray, updatedBy})
+        body: JSON.stringify({roomId, bookingId, accessLvl, extraAccess, addedBy, userName})
+          
 
       });
       
