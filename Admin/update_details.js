@@ -45,7 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
         headers: {
           "Content-Type": "application/json"
         },
+        // room id, booking id
+        // body: JSON.stringify({bookingId, access, extraAloorsArray, updatedBy})
         body: JSON.stringify({bookingId, access, extraAloorsArray, updatedBy})
+
       });
       
 
