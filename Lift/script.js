@@ -1,11 +1,18 @@
 
     var music = new Audio('./assets/fan.mp3');
     let isPlaying = false;
+    const rotatingImage = document.getElementById('fan_img');
     function playMusic(){
     if (isPlaying) {
         music.pause();
+        clearInterval(rotationInterval);
       } else {
         music.play();
+        let rotation = 0;
+  rotationInterval = setInterval(function() {
+    rotation += 2; // Adjust the rotation speed
+    rotatingImage.style.transform = `rotate(${rotation}deg)`;
+  }, 100);
       }
       isPlaying = !isPlaying;
     }
