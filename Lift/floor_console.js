@@ -61,6 +61,7 @@ async function fetchDataAndDisplay() {
       const elements = document.querySelectorAll(`[id="${i}"]`);
       elements.forEach(element => {
         element.classList.add('disable');
+        element.onclick = null;
       });
     }
 
