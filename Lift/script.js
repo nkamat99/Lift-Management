@@ -12,7 +12,7 @@
   rotationInterval = setInterval(function() {
     rotation += 2; // Adjust the rotation speed
     rotatingImage.style.transform = `rotate(${rotation}deg)`;
-  }, 100);
+  }, 80);
       }
       isPlaying = !isPlaying;
     }
