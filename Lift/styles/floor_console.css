@@ -55,7 +55,7 @@ body {
     opacity: 0;
     transform: scale(0.5);
     transition: opacity 1s, transform 1s;
-    animation: popupAnimation 1s ease-out forwards;
+    animation: popupAnimation 2s ease-out forwards;
   }
   @keyframes popupAnimation {
     0% {
@@ -199,7 +199,7 @@ img {
 }
 #right{
 position: absolute;
-  animation-duration: 5s;
+  animation-duration: 7s;
   animation-name: rightslide ; 
   z-index: 10;
  
