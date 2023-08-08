@@ -76,15 +76,13 @@ document.addEventListener("DOMContentLoaded", function () {
         // room id, booking id
         // body: JSON.stringify({bookingId, access, extraAloorsArray, updatedBy})
         body: JSON.stringify({roomId, bookingId, accessLvl, extraAccess, addedBy, userName})
-          
-
       });
       
 
       const responseData = await response.json();
       console.log("Response from backend:", responseData);
 
-      if (responseData.message == 'Details updated') {
+      if (responseData.message === "User created" || responseData.message === "Details updated") {
         // Successful update, navigate to bookings.html
         window.location.href = "bookings.html";
       } else {

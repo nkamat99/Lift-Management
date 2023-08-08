@@ -110,6 +110,10 @@ document.addEventListener("DOMContentLoaded", async function() {
           body: JSON.stringify({bookingId, addedBy})
         });
   
+        console.log("booking ID", bookingId);
+        console.log("booking ID", addedBy);
+
+
         const responseData = await response.json();
         console.log(responseData);
         
