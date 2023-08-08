@@ -23,32 +23,4 @@ music.addEventListener('ended', function () {
   });
 
   
-  var alertMusic = new Audio('./assets/alert.mp3');
-  let isAlert = false;
- 
-  function playAlert(){
-  if (isAlert) {
-      alertMusic.pause();
-    } else {
-      alertMusic.play();
-    }
-    isAlert = !isAlert;
-  }
-  
-alertMusic.addEventListener('ended', function () {
-  isAlert = false;
-});
-
-alertMusic.addEventListener('play', function () {
-  isAlert = true;
-  localStorage.setItem('isAlert','true');
- 
-
-});
-
-alertMusic.addEventListener('pause', function () {
-  isAlert = false;
-});
-
-
   

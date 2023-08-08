@@ -39,17 +39,16 @@ background-size: 100vw 100vh;
   }
   #meter_01,#meter_02{
 
-    font-family: 'Handjet', cursive;
+    font-family: 'Press Start 2P', cursive;
     background-color:black;
     display: flex;
     justify-content: center;
     align-items: center;
     width:100%;
     gap: 40px;
-    font-size: 40px;
+    font-size: 20px;
   line-height: 0px;
     color: #B00101;
-    font-weight: 300;
 
 }
 .steel{

@@ -178,7 +178,7 @@ position: absolute;
   #alert{
     width: 200px;
     height: 160px;
-    background-color: rgb(255, 255, 255);
+    background:url("../assets/meter_bac.jpg");
     display: none;
     border-radius: 15%;
     flex-direction: column;
@@ -194,7 +194,7 @@ position: absolute;
   
   
   #cookieimg {
-    width: 50px;
+    width: 70px;
   }
   
 
@@ -207,16 +207,16 @@ position: absolute;
   
   .cookieDescription {
     text-align: center;
-    font-size: 0.7em;
+    font-size: 1.3em;
     font-weight: 600;
-    color: rgb(99, 99, 99);
+    color: #B00101;
   }
   
   
   .acceptButton {
     width: 80px;
     height: 30px;
-    background-color: #7b57ff;
+    background-color: black;
     transition-duration: .2s;
     border: none;
     color: rgb(241, 241, 241);
@@ -226,6 +226,6 @@ position: absolute;
   }
   
   .acceptButton:hover {
-    background-color: #9173ff;
+   
     transition-duration: .2s;
   }

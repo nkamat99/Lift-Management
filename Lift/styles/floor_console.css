@@ -121,18 +121,18 @@ border-radius: 50%;
   }
   .meter{
       
-      font-family: 'Handjet', cursive;
+      font-family: 'Press Start 2P', cursive;
       background-color:black;
-      font-weight: 300;
+      
       display: flex;
       justify-content: center;
       align-items: center;
       width:90%;
       gap: 40px;
       margin: 8px 0px;
-      font-size: 70px;
-    line-height: 3px;
-      color: #ce0505;
+      font-size: 40px;
+    line-height: 5px;
+      color: #B00101;
       animation: blink-animation 10s linear infinite;
   }
   @keyframes blink-animation {
@@ -144,7 +144,7 @@ border-radius: 50%;
   
   #down_arrow,#up_arrow{
     width: 70px;
-    height: 40px;
+    height: 50px;
   }
   
   button{

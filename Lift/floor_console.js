@@ -126,11 +126,10 @@ async function fetchDataAndDisplay() {
    }
 
   function alarm(currentFloor) {
-    // This wait of 3 secs is not working
-    // setTimeout(function() {
-    //   console.log("3 seconds have passed");
-    // }, 3000); 
-    console.log("currentFloor lift stopping", currentFloor);
+    // // This wait of 3 secs is not working
+    //  setTimeout(function() {
+    //   console.log("3 seconds have passed");}, 3000); 
+    // console.log("currentFloor lift stopping", currentFloor);
     const current_floor = document.getElementById('current_floor');
     
     if(sessionStorage.getItem('lift_in_motion') == "lift1"){
@@ -144,7 +143,8 @@ async function fetchDataAndDisplay() {
     console.log("the lift stops at",currentFloor);
     current_floor.textContent = currentFloor.toString();
     
-    window.location.href= "exit_doors.html";
+  // setInterval(3000);
+   window.location.href= "exit_doors.html"
   }
 
 
