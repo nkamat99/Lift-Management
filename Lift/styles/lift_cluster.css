@@ -6,13 +6,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url("../assets/lift_cluster.jpg");
+    background-image: url("../assets/out.png");
     background-repeat: no-repeat;
 background-size: 100vw 100vh;
     min-height: 100vh;
-    opacity: 0;
-  transition: opacity 3s ease-in-out; /* Apply transition to opacity property */
-  animation: darkToLight 2s ease-in-out forwards;
+    opacity: 1;
+  /* transition: opacity 3s ease-in-out; /* Apply transition to opacity property */
+  /* animation: darkToLight 2s ease-in-out forwards; */ 
   }
   @keyframes darkToLight {
   0% {
@@ -34,8 +34,8 @@ background-size: 100vw 100vh;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 180px;
-    margin-top: 35px;
+    gap: 200px;
+    margin-top: 75px;
   }
   #meter_01,#meter_02{
 
@@ -63,7 +63,7 @@ padding: 0 10px;
 .elevator{
     display: flex;
     flex-direction: row;
-    gap:180px;
+    gap:200px;
     
 }
 .down_arrow,.up_arrow{

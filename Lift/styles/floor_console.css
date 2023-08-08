@@ -6,24 +6,21 @@ body {
     align-items: center;
     justify-content: center;
     background-image: url("../assets/Floor_console.jpg"); 
-   
+    background-size: 100vw 100vh;
+    min-height: 100vh;
+    opacity: 1;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%; 
+    overflow: hidden;
     /* background-color: black; */
   }
   
- #speakers{
-
-margin-top: 15px;
-  height: 50px;
-  width: 50px;
-border-radius: 50%;
- }
-  
   .container {
-    position: relative;
+    position: fixed;
     font-family: sans-serif;
+    top: 50px;
+    right: 450px;
     
   }
   
@@ -187,6 +184,58 @@ td p{
   font-family: 'Oswald', sans-serif;
   color: white;
 
+}
+
+
+
+/* doors */
+.doors{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+img {
+  height: 100vh; 
+}
+#right{
+position: absolute;
+  animation-duration: 5s;
+  animation-name: rightslide ; 
+  z-index: 10;
+ 
+
+}
+@keyframes rightslide {
+  from {
+    margin-left: 0%;
+    width: 50%;
+  }
+
+  to {
+    margin-left: 100%;
+    width: 0%;
+    display: none;
+  }
+}
+#left{
+  position: absolute;
+  animation-duration: 7s;
+  animation-name: leftslide;
+ z-index: 10;
+ height: 100vh; 
+  
+}
+@keyframes leftslide {
+  to {
+    margin-left:-150%;
+    width: 50%;
+    display: none;
+  }
+
+  from{
+    margin-left: -50%;
+    width: 0%;
+  }
 }
 
  

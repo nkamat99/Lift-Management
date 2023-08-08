@@ -9,9 +9,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Handjet&family=Oswald:wght@300&family=Poppins:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
 <script src="bookings.js"></script>    
 <title>Bookings</title>
+
    
 </head>
 <body>
+  <div id="popup" id="confirmation-popup">
+    <p>Are you sure you want to proceed?</p>
+    <button id="confirm-yes" onclick="confirm_check()">Yes</button>
+    <button id="confirm-cancel">Cancel</button>
+  </div>
 
   <div id="profile-sidebar">
     <div class="profile-info">
@@ -23,9 +29,14 @@
   </a>
     </div>
   </div>
-  <button class="top-bar" onclick="trigger()">
-    <img src="../Lift/assets/account.png" />
-  </button>
+  <div class="top-bar">
+    <h1>Booking Details</h1>
+    <button  onclick="trigger()">
+      <img src="../Lift/assets/account.png" />
+    </button>
+  </div>
+  
+ 
   <table class="data-table">
     <thead>
       <tr>

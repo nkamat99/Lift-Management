@@ -8,13 +8,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
+    opacity: 0.9;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: center; 
+    background-position: 100%; 
     /* background-color: rgb(36, 36, 36); */
-    background-image: url("brick.jpeg");
-   
+    /* background-image: url("brick.jpeg"); */
+    background-image: url("../assets/out.png");
+   /* background-image: url("../assets/outside_console.jpg"); */
 
   }
   
@@ -178,7 +179,7 @@ position: absolute;
   #alert{
     width: 200px;
     height: 160px;
-    background:url("../assets/meter_bac.jpg");
+    background:url("../assets/meter_bac_alert.jpg");
     display: none;
     border-radius: 15%;
     flex-direction: column;

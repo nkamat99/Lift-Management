@@ -68,7 +68,17 @@ document.addEventListener("DOMContentLoaded", async function() {
           const bookingId = button.getAttribute("data-bookingId");
           // password="abc";
           addedBy = sessionStorage.getItem('staffName');
+          const confirmMessage = `Are you sure you want to delete this entry?`;
+        const userConfirmed = window.confirm(confirmMessage);
+        if(userConfirmed)
+        {
           deleteBooking(bookingId, addedBy) ;
+        }
+        else
+        {
+          // window.location.href = "bookings.html";
+          console.log("User cancelled delete");
+        }
 
           // try {
           //   const response = await fetch("http://localhost:8080/booking/deleteUser", { // Replace with your backend login API URL
@@ -117,10 +127,10 @@ document.addEventListener("DOMContentLoaded", async function() {
         const responseData = await response.json();
         console.log(responseData);
         
-        const confirmMessage = `Are you sure you want to delete this entry?`;
-        const userConfirmed = window.confirm(confirmMessage);
-        if(userConfirmed)
-        {
+        // const confirmMessage = `Are you sure you want to delete this entry?`;
+        // const userConfirmed = window.confirm(confirmMessage);
+        // if(userConfirmed)
+        // {
           if (responseData.message == 'successful') {
             console.log("Successfully deleted");
             window.location.href = "bookings.html";
@@ -128,12 +138,12 @@ document.addEventListener("DOMContentLoaded", async function() {
             // Invalid login, show error message
             alert("Error deleting. Please try again");
           }
-        }
-        else
-        {
-          // window.location.href = "bookings.html";
-          console.log("User cancelled delete");
-        }
+        // }
+        // else
+        // {
+        //   // window.location.href = "bookings.html";
+        //   console.log("User cancelled delete");
+        // }
         
       } catch (error) {
         console.error("Error:", error);

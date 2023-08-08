@@ -140,9 +140,9 @@ body {
   }
   
   #alert{
-    width: 200px;
-    height: 160px;
-    background-color: rgb(255, 255, 255);
+    width: 180px;
+    height: 140px;
+    background-color:#87bdf1;
     display: none;
     border-radius: 15%;
     flex-direction: column;
@@ -171,16 +171,16 @@ body {
   
   .cookieDescription {
     text-align: center;
-    font-size: 0.7em;
+    font-size: 1em;
     font-weight: 600;
-    color: rgb(99, 99, 99);
+    color:#21395f;
   }
   
   
   .acceptButton {
     width: 80px;
     height: 30px;
-    background-color: #7b57ff;
+    background-color: #21395f;
     transition-duration: .2s;
     border: none;
     color: rgb(241, 241, 241);
@@ -190,7 +190,7 @@ body {
   }
   
   .acceptButton:hover {
-    background-color: #9173ff;
+    background-color: #21395f;
     transition-duration: .2s;
   }
 

@@ -73,7 +73,7 @@ if(direction == -1 ){
         p.style.color="green";
         sessionStorage.setItem(currentFloor,'floor')
         setTimeout(2000);
-    window.location.href= "Doors.html";
+    window.location.href= "floor_console.html";
           clearInterval(interval);
       }
   }, 3000);

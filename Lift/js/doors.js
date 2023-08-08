@@ -29,7 +29,7 @@ music.addEventListener('ended', function () {
 animatedDiv.addEventListener('animationend', () => {
 
     animatedDiv.style.display = 'none';
-    location.replace("floor_console.html")
+    
     
 });
 const animatedDivright = document.getElementById('right');
