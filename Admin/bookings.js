@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async function() {
           <td>${booking.addedBy}</td>
           <td>
             <button class="btn-update" data-room="${booking.roomId}" data-user="${booking.userName}" data-access="${booking.accessLvl}" data-floors="${booking.extraAccess.join(', ')}" data-updatedby="${booking.addedBy}" data-bookingId="${booking.bookingId}" >Update</button>
-            <button class="btn-delete" data-bookingId="${booking.bookingId}">Delete</button>
+            <button class="btn-delete" data-bookingId="${booking.bookingId}">Checkout</button>
           </td>
         `;
         tableBody.appendChild(row);
