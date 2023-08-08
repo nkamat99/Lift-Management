@@ -3,7 +3,8 @@ async function fetchDataAndDisplay() {
     console.log(floor);
     const roomId = sessionStorage.getItem('roomno');
     console.log(roomId);
-  
+     
+   
     try {
       const response = await fetch('http://localhost:8080/accessLevel/findAccessLevel', {
         method: 'POST',
@@ -107,8 +108,8 @@ async function fetchDataAndDisplay() {
               console.log("Current Lift Floor:", currentFloor);
               document.getElementById("alert_btn").addEventListener("click", () => {
                 console.log("button clicked and stopping floor is ", currentFloor)
-                           
-                alarm(currentFloor);
+                playAlarm(currentFloor);
+               
                 clearInterval(interval);
               });
           } else {
@@ -125,9 +126,58 @@ async function fetchDataAndDisplay() {
     console.log("Do nothing");
    }
 
+//
+function playAlarm(currentFloor){
+  var music = new Audio('./assets/alert.mp3');
+
+  let isPlaying = false;
+  if (isPlaying) {
+      music.pause();
+    } else {
+      music.play();
+      setTimeout(function() {
+        // Code to be executed after the delay
+        console.log("Delayed code executed after 5 seconds");
+      }, 5000);
+      
+      
+    }
+    isPlaying = !isPlaying;
+    music.addEventListener('ended', function () {
+      setTimeout(function() {
+        // Code to be executed after the delay
+        console.log("Delayed code executed after 5 seconds");
+        alarm(currentFloor);
+      }, 3000);
+      
+      isPlaying = false;
+
+    });
+    
+    music.addEventListener('play', function () {
+      setTimeout(function() {
+        // Code to be executed after the delay
+        console.log("Delayed code executed after 5 seconds");
+        alarm(currentFloor);
+      }, 3000);
+      isPlaying = true;
+    });
+    
+    music.addEventListener('pause', function () {
+      setTimeout(function() {
+        // Code to be executed after the delay
+        console.log("Delayed code executed after 5 seconds");
+        alarm(currentFloor);
+      }, 3000);
+      isPlaying = false;
+    });
+  }
+  
+
+//
   function alarm(currentFloor) {
     // // This wait of 3 secs is not working
-    //  setTimeout(function() {
+    // setTimeout(function() {
     //   console.log("3 seconds have passed");}, 3000); 
     // console.log("currentFloor lift stopping", currentFloor);
     const current_floor = document.getElementById('current_floor');
@@ -144,7 +194,7 @@ async function fetchDataAndDisplay() {
     current_floor.textContent = currentFloor.toString();
     
   // setInterval(3000);
-   window.location.href= "exit_doors.html"
+    window.location.href= "exit_doors.html";
   }
 
 
